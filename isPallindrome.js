@@ -18,10 +18,6 @@ function isPallindrome(str){
     
 }
 isPallindrome("mooom");
-
-
-
-
 // so so
 
 function isPallindrome(str){
