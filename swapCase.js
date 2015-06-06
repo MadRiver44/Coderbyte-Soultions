@@ -13,36 +13,9 @@
 // 4. return the changed string
 
 
-
-
-function swapCase(string){
-    var alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    for(var i = 0; i <= string.length; i++){
-        //console.log(i);
-        //console.log(string[i]);
-        //console.log(string[i].toUpperCase())
-        //iterate through string passed
-        //if(string[i] === string.indexOf(i)) {
-        //if string at pos i == first location of letter in alpha
-            // and if is is lowercase switch to upper
-            // if it is uppercase switch to lower
-            if (string[i] === string[i].toLowerCase()){
-                //return string.toUpperCase();
-                console.log(string.toUpperCase());
-            }else if (string[i] === string[i].toUpperCase()) {
-                console.log(string.toLowerCase());//toLowerCase(string[i])
-                //return string.toLowerCase();
-            }
-        
-    }
-    
-}
 swapCase("i LOVE PiZzA");
-
 function swapCase(string){
-//
-var newStr = ""; 
-//reverse the case
+var newStr = "";   //reverse the case
  
 for (var i = 0; i < string.length; i++){   // loop thru string
     var char = string[i];
@@ -57,5 +30,4 @@ for (var i = 0; i < string.length; i++){   // loop thru string
 swapCase("Sup DUDE!!?");
 
 //2/22/15 8:57 at this point it is switching, but whole, not parts
-
 // need to use push to add the new switched case to a new variable
