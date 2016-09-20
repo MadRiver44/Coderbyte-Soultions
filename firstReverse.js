@@ -1,6 +1,6 @@
 function FirstReverse(str) { 
   var newString = '';
-  for (var i = str.length -1; i >=0 ; i--) { // simply loop starting at the end of array
+  for (var i = str.length -1; i >= 0 ; i--) { // simply loop starting at the end of array
     newString += str[i];
   }
   return newString; 
