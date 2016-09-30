@@ -1,5 +1,14 @@
-//Using the JavaScript language, have the function LetterCapitalize(str) take the str parameter being 
-//passed and capitalize the first letter of each word. Words will be separated by only one space.
+/*
+Using the JavaScript language, have the function LetterCapitalize(str) take the str parameter being 
+passed and capitalize the first letter of each word. Words will be separated by only one space.
+*/
+
+// best with Regex, and replace() second param can take function
+function letterCap(str){
+    return str.replace(/\b[a-zA-z]/gi, function(char){
+        return char.toUpperCase();
+    });
+}
 
 
 
