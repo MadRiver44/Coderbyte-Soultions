@@ -6,6 +6,19 @@ no punctuation or numbers. For example: if str is "xooxxxxooxo" then the output 
 there are 6 x's and 5 o's.
 */
 
+// better
+
+function ExOh(str){
+	var xs = str.match(/x/gi).length;
+	var os = str.match(/o/gi).length;
+	if(xs === os){
+		return true;
+	}
+	return false;
+}
+
+ExOh("xxxoooxxoo");
+
 function xo(str){
 	var x = str.match(/x/gi);
 	var o = str.match(/o/gi);
