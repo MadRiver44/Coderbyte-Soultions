@@ -1,33 +1,25 @@
-// Create the function switchCase(string) take the str parameter and switch the case (lowercase or uppercase) of each character.  
-
-// **EXAMPLE**
-
-// - INPUT: `swapCase("i LOVE PiZzA");`
-// - OUTPUT: `"I love pIzZa"
-
-//  1.take the parameter (string) and compare the case to a var that
-// iterates through a variable that stores the alphabet
-// in the appropriate case
-// 2. if there is a match, switch the case use the toCase() method
-// 3. update the string held in a variable
-// 4. return the changed string
+/*
+Have the function SwapCase(str) take the str parameter and swap the case of 
+ach character. For example: if str is "Hello World" the output should be hELLO wORLD. 
+Let numbers and symbols stay the way they are.
+*/
 
 
-swapCase("i LOVE PiZzA");
-function swapCase(string){
-var newStr = "";   //reverse the case
+var newStr = ""; 
  
-for (var i = 0; i < string.length; i++){   // loop thru string
-    var char = string[i];
+for (var i = 0; i < str.length; i++){   // loop thru string
+    var char = str[i];
     if (char === char.toLowerCase()){       // test if char is upper or lower
         newStr = newStr + char.toUpperCase();    // var holds uppser switch
     } else {
         newStr = newStr + char.toLowerCase();   // var holds lower switch
-    } //Got it, now to return it in one line
-    
-}console.log(newStr);  // the var newStr has held all values and is printed outside function
+    } 
+  } 
+  return newStr; 
+         
 }
-swapCase("Sup DUDE!!?");
 
-//2/22/15 8:57 at this point it is switching, but whole, not parts
-// need to use push to add the new switched case to a new variable
+swap("Hello World");
+
+
+
