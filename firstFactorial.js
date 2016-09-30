@@ -1,10 +1,36 @@
+
+//while
+
+function fact(num){
+	var sum = 1;
+	while(num !== 0){
+		sum *= num;
+		num--;
+	}
+	return sum;
+}
+
+// if/ else
+
+var factorial =  function fact(num){
+	var total = 1;
+	if(num === 1){
+		return 1;
+	}else{
+		while(num > 0){
+			total *= num;
+			num--;
+		}
+	}
+	return total;
+};
+
+// for loop
+ 
 function FirstFactorial(num){
     var fact = num;
     for (var i = num - 1; i > 1; i--){
         fact *= i;
-        //console.log(num);
-        //console.log(i);
-        console.log(fact);
     }
     return fact;
 }
