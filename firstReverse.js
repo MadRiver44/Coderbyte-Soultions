@@ -1,3 +1,13 @@
+
+//best
+
+function revStr(str){
+  return str.split("").reverse().join("");
+}
+
+
+// better
+
 function FirstReverse(str) { 
   var newString = '';
   for (var i = str.length -1; i >= 0 ; i--) { // simply loop starting at the end of array
@@ -6,8 +16,14 @@ function FirstReverse(str) {
   return newString; 
          
 }
+
+// using recursion
+
+function recur(str){
+  return str === " " ? " " : recur(str.substring(1) + str.charAt(0));
+}
   
-// Or....
+// beginner version...
 
 function FirstReverse(str) { 
   var newString = '';	  // this needed to be defined outside the for loop, when it was 
