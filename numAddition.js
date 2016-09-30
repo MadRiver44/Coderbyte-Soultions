@@ -6,6 +6,20 @@
  and "5Hello 5" should return two different answers. Each string will contain at least one letter or symbol. 
  */
 
+function numSearch(str){
+	var arr = str.match(/\d+/g);
+	var sum = 0;
+	for(var i = 0; i < arr.length; i++){
+		sum += parseInt(arr[i], 10); // always use radix
+	}
+	return sum;
+}
+
+numSearch("5Hello 5");
+
+
+
+
 var str = "88Hello99 3World!"; // sample numberSring
 var sum = 0;
 
@@ -15,4 +29,5 @@ var searchNum = function numberString(str){
          sum += parseInt(s[i]); // parseInt() parses a string and returns an integer of spec'd radix (base)
         }return sum;
      };
+     
 searchNum(str);
