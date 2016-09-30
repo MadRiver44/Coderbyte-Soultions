@@ -1,8 +1,12 @@
 
 
-// Create the function "aBCheck(string)" that accepts a string parameter. Return the STRING value "true" if the characters 
-// a or b are separated by 3 places anywhere in the string at least one time. Otherwise return the STRING value "false"
- 
+/* 
+Create the function "aBCheck(string)" that accepts a string parameter. Return the STRING 
+value "true" if the characters a or b are separated by 3 places anywhere in the string at 
+least one time. Otherwise return the STRING value "false"
+ */
+
+
 // EXAMPLES:
 // INPUT: aBCheck("pane borrowed");
 // OUTPUT: "true"
@@ -11,11 +15,18 @@
 // INPUT: aBCheck("painsarc");
 // OUTPUT: "true"
 
-//correct
+
+// best
+
+function ab(str){
+    var pattern = /a...b/ || /b...a/;
+     return pattern.test(str);
+}
+
+// better
 
 function ABcheck(str){
     for (var i = 0; i < str.length; i++){
-        //console.log(str[i], str[i+4]);
         if(str[i] == "a"){
             if(str[i +4] == "b"){
                 return true;
@@ -25,15 +36,7 @@ function ABcheck(str){
 }
 ABcheck("lane borrowed");
 
-
-
-
-
-
-
-
-
-
+// beginner versions
 
 function aBCheck(string){
     // cant do index position because spaces in string throw count off
