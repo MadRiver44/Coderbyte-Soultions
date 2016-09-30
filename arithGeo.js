@@ -1,3 +1,44 @@
+// cleaner version, helper functions to test for pattern
+// 5/5 test cases pass
+
+function arith(arr){
+	for(var i = 0; i < arr.length-1; i++){
+		var diff = arr[1] - arr[0];
+		var seq = arr[i + 1] - arr[i];
+		if(seq !== diff){
+			return false;
+		}
+	}
+	return true;
+}
+
+function geo(arr){
+	for(var i = 0; i <arr.length -1; i++){
+		var diff = arr[1] % arr[0];
+		var seq = arr[i+1]% arr[i];
+		if(seq !== diff){
+			return false;
+		}
+	}
+	return true;
+}
+
+function arithgeo(arr){
+	if (arith(arr)){
+		return "arithmetic";
+	}else if(geo(arr)){
+		return "geometric";
+	}else{
+		return -1;
+	}
+}
+
+//arithgeo([2,4,8,16,32,64]);
+
+
+
+// poor version, test cases do fail..
+
 var arr = [1,2,3,4,5,10,20];
 var nArr = [];
 var value = [];
