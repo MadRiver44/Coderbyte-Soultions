@@ -1,3 +1,24 @@
+/*
+Have the function LongestWord(sen) take the sen parameter being passed and return the largest word
+in the string. If there are two or more words that are the same length, return the first word from 
+the string with that length. Ignore punctuation and assume sen will not be empty. 
+*/
+
+// best
+
+function longestWord(sen){
+    sen = sen.replace(/[^a-zA-Z\d\s]/gi, " ");
+    var word = sen.split(" ").sort(function(a, b){
+        return b.length - a.length;
+        
+    });
+    console.log(word);
+    return word.shift();
+}
+
+
+// beginner
+
 function LongestWord(sen) { 
     
     var x = sen.split(" "); // forms array of sen
