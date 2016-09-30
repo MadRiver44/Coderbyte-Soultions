@@ -13,6 +13,14 @@ function vowel(str){
 vowel("all cows eat grass");
 
 
+// same principal with ternary
+function VowelCount(str) { 
+  var vowels = str.match(/[aeiou]/gi);
+  return (vowels === null) ? 0 : vowels.length; 
+         
+}
+
+
 // for loop
 
 function VowelCount(str) { 
